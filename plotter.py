@@ -1,4 +1,5 @@
 import math
+from io import BytesIO
 
 import matplotlib.pyplot as plt
 
@@ -31,7 +32,11 @@ def plot_all_spectrograms(data_list):
         axes[j].axis('off')
 
     plt.tight_layout()
-    plt.show()
+    buf = BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    plt.close(fig)
+    return buf
 
 
 def show_peaks_on_spectrogram(S, peaks, title="Spectrogram with Peaks"):

@@ -1,5 +1,5 @@
 import json
-from fingerprint import get_fingerprints, get_fingerprints_with_fft
+from fingerprint import get_fingerprints_with_fft
 
 
 def load_database(db_file='fingerprints_db.json'):
@@ -13,8 +13,8 @@ def load_database(db_file='fingerprints_db.json'):
 def match_clip(clip_path, db_file='fingerprints_db.json'):
 
     """
-        Now that you have fingerprints from the clip and fingerprints stored for full songs, you:
-        Extract all hashes from the clip.
+        Now that we have fingerprints from the clip and fingerprints stored for full songs, you:
+        we extract all hashes from the clip.
         Compare them to each song's fingerprints.
         Count how many hashes match.
     :param clip_path: path to the clip file
@@ -38,4 +38,4 @@ def match_clip(clip_path, db_file='fingerprints_db.json'):
 
     best_match = max(scores, key=scores.get)
     print(f"Best match for {clip_path}: {best_match} with {scores[best_match]} matching fingerprints")
-    return S, peaks
+    return S, peaks, best_match
