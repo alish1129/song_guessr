@@ -42,6 +42,9 @@ def recognize(clip_path):
 
     print("\nRecognizing clip...")
     clipS, clipPeaks, best_match = match_clip(clip_path)
+    S, peaks, fingerprints = get_fingerprints_with_fft('database/' + best_match + '.mp3')
+
+    spec_data.append((S, peaks, best_match))
 
     my_bar.progress(75, text="Clip recognized. Now plotting...")
 
