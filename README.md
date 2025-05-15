@@ -27,7 +27,7 @@ Fundamental package for numerical arrays and operations (e.g., spectrogram data)
 - **librosa**:
 Audio processing library; handles loading, FFT (STFT), and amplitude-to-dB conversion.
 
--** scipy**:
+- **scipy**:
 Provides signal-processing tools like stft and maximum_filter for peak detection.
 
 ## 📌 Key Files
