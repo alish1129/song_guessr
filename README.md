@@ -14,6 +14,22 @@ This project implements a simplified song recognition system that uses audio fin
 5. **Matching**: Compares a clip’s fingerprints to find the best match.
 6. **Visualization**: Shows detected peaks and fingerprint pairs on spectrograms.
 
+## 📦 Packages
+- matplotlib
+Plotting library for creating spectrograms and overlaying peaks/landmarks.
+
+- streamlit
+Easy way to build a web interface for uploading clips and displaying results interactively.
+
+- numpy
+Fundamental package for numerical arrays and operations (e.g., spectrogram data).
+
+- librosa
+Audio processing library; handles loading, FFT (STFT), and amplitude-to-dB conversion.
+
+- scipy
+Provides signal-processing tools like stft and maximum_filter for peak detection.
+
 ## 📌 Key Files
 
 - `fingerprint.py`: Functions for spectrogram, peak finding, and landmark generation.
